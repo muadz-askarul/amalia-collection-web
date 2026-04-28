@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { products } from '@/lib/products';
-import { formatPrice } from '@/lib/format';
-import { Search } from 'lucide-react';
+import { useState } from "react";
+import { products } from "@/lib/products";
+import { formatPrice } from "@/lib/format";
+import { Search } from "lucide-react";
 
 export default function OwnerCatalogClient() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Flatten the variants to make searching and displaying as independent cards easier
   const filteredVariants = products
@@ -17,7 +17,7 @@ export default function OwnerCatalogClient() {
         variantName: variant.label,
         minPrice: variant.minPrice,
         recommendedPrice: variant.recommendedPrice,
-      }))
+      })),
     )
     .filter((item) => {
       const searchLower = searchQuery.toLowerCase();
@@ -36,14 +36,14 @@ export default function OwnerCatalogClient() {
             Katalog Rahasia (Owner)
           </h1>
           <p className="text-text-muted text-lg mb-8 max-w-2xl">
-            Halaman internal untuk melihat harga minimal dan rekomendasi penjualan produk.
+            Halaman internal untuk melihat harga minimal dan rekomendasi
+            penjualan produk.
           </p>
-
         </div>
       </div>
 
       {/* Sticky Search Bar Container */}
-      <div className="sticky top-[64px] md:top-[72px] z-30 bg-surface/90 backdrop-blur-md py-4 border-b border-border shadow-sm">
+      <div className="sticky top-16 md:top-18 z-30 bg-surface/90 backdrop-blur-md py-4 border-b border-border shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative max-w-2xl">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -65,10 +65,11 @@ export default function OwnerCatalogClient() {
           <div className="text-center py-16 bg-surface rounded-2xl border border-border">
             <Search className="h-12 w-12 text-text-muted mx-auto mb-4 opacity-50" />
             <p className="text-text-muted text-lg font-medium">
-              Tidak ada produk yang cocok dengan pencarian "{searchQuery}".
+              Tidak ada produk yang cocok dengan pencarian &quot;{searchQuery}
+              &quot;.
             </p>
             <button
-              onClick={() => setSearchQuery('')}
+              onClick={() => setSearchQuery("")}
               className="mt-4 text-primary font-medium hover:underline"
             >
               Reset Pencarian
@@ -90,8 +91,10 @@ export default function OwnerCatalogClient() {
                   </h3>
                   <div className="bg-surface-warm p-3 rounded-lg border border-border">
                     <p className="text-text font-medium text-lg">
-                      Varian:{' '}
-                      <span className="font-bold text-primary">{item.variantName}</span>
+                      Varian:{" "}
+                      <span className="font-bold text-primary">
+                        {item.variantName}
+                      </span>
                     </p>
                   </div>
                 </div>

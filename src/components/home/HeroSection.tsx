@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-background via-surface-warm to-background">
+    <section className="relative overflow-hidden bg-linear-to-br from-background via-surface-warm to-background">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/3" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-light/10 rounded-full translate-y-1/2 -translate-x-1/3" />
@@ -76,7 +76,7 @@ export default function HeroSection() {
 
           {/* Hero image area */}
           <div className="relative">
-            <div className="relative bg-gradient-to-br from-primary/10 to-accent-light/20 rounded-3xl p-8 md:p-12 aspect-square flex items-center justify-center">
+            <div className="relative bg-linear-to-br from-primary/10 to-accent-light/20 rounded-3xl p-8 md:p-12 aspect-square flex items-center justify-center">
               <div className="text-center">
                 <div className="w-32 h-32 mx-auto mb-6 bg-surface rounded-full flex items-center justify-center shadow-lg relative overflow-hidden">
                   <Image

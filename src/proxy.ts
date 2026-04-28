@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
     // Only apply to the owner catalog
     if (req.nextUrl.pathname.startsWith('/katalog-owner')) {
         const basicAuth = req.headers.get('authorization');
